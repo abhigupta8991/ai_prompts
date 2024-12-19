@@ -19,7 +19,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className='flex-between w-full mb-16 pt-3'>
+    <nav className='flex-between w-full mb-12 pt-3'>
       <Link href='/' className='flex gap-2 flex-center'>
         <Image 
           src='/assets/images/logo.svg'
@@ -37,7 +37,7 @@ const Nav = () => {
             <Link href='/create-post' className='black_btn'>
               Create Post
             </Link>
-            <button type='button' className='outline_btn' onClick={signOut}>
+            <button type='button' className='outline_btn cursor-pointer' onClick={signOut}>
               Sign Out
             </button>
             <Link href='/profile'>
@@ -45,7 +45,7 @@ const Nav = () => {
                 src={session?.user?.image}
                 width={37}
                 height={37}
-                className='rounded-full'
+                className='rounded-full cursor-pointer'
                 alt='profile-pic'
               />
             </Link>
@@ -75,7 +75,7 @@ const Nav = () => {
               src={session?.user?.image}
               width={37}
               height={37}
-              className='rounded-full'
+              className='rounded-full cursor-pointer'
               alt='profile-pic'
               onClick={()=> {setSideMenu((prev) => !prev)}}
             />
